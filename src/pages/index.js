@@ -1,16 +1,53 @@
-import React from "react"
-import { Link } from 'gatsby'
+import React from 'react'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import Layout from '../components/Layout'
+import Bio from '../components/Bio'
+import indexStyles from './index.module.scss'
 
-const IndexPage = () => {
+const Index = () => {
+  const data = useStaticQuery(graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            date
+          }
+          fields {
+            slug
+          }
+          excerpt
+          timeToRead
+        }
+      }
+    }
+  }
+  `)
+
   return (
     <Layout>
-      <h1>Hello</h1>
-      <h2>I'm Katelin, a front end developer living in Michigan</h2>
-      <p>Need a developer? <Link to="/contact">Contact Me</Link></p>
+      <Bio />
+      <h1>Posts</h1>
+      <ol className={indexStyles.posts}>
+        {data.allMarkdownRemark.edges.map(edge => {
+          const { node } = edge
+
+          return (
+            <li className={indexStyles.post}>
+              <Link to={`/${node.fields.slug}`}>
+                <h2>{node.frontmatter.title}</h2>
+                <p>{node.frontmatter.date}</p>
+                <p>{node.excerpt}</p>
+                <p>{node.timeToRead}min read</p>
+              </Link>
+            </li>
+          )
+        })}
+      </ol>
     </Layout>
   )
 }
 
-export default IndexPage
+export default Index

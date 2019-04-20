@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  font-size: 1.2rem;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.profilePic {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  border: 4px solid #e6b800;
+}

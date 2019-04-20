@@ -8,14 +8,14 @@
 
   a {
     background: #f4f4f4;
-    color: #000;
+    color: #4d4d4d;
     display: block;
     padding: 1rem;
     text-decoration: none;
-  }
 
-  a:hover {
-    background: #e4e4e4;
+    &:hover {
+      background: #e6e6e6;
+    }
   }
 
   h2 {
@@ -24,6 +24,5 @@
 
   p {
     color: #777;
-    font-size: .8rem;
   }
 }
