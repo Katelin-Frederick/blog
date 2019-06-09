@@ -1,7 +1,7 @@
 import React from 'react'
 
 import profileImage from '../images/profilePic.jpg'
-import bioStyles from './bio.module.scss'
+import bioStyles from './Bio.module.scss'
 
 const Bio = () => {
   return (
