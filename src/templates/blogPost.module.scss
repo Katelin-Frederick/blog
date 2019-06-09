@@ -1,0 +1,10 @@
+p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+@media(max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+}

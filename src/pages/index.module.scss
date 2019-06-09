@@ -1,28 +1,32 @@
 .posts {
   list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 
 .post {
   margin: 1rem 0;
 
   a {
-    background: #f4f4f4;
-    color: #4d4d4d;
+    background: #c3c1bb;
+    color: #fefffe;
     display: block;
     padding: 1rem;
     text-decoration: none;
-
+    box-shadow: 0 10px 6px -6px #777;
+    
     &:hover {
-      background: #e6e6e6;
+      background: #aba8a0;
     }
   }
 
   h2 {
     margin-bottom: 0;
+    font-size: 1.6rem;
   }
 
   p {
-    color: #777;
+    color: #fefffe;
+    font-size: 1.2rem;
   }
 }

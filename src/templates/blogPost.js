@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
+import blogPostStyles from'./blogPost.module.scss'
 
 export const query = graphql`
   query($slug: String!) {
@@ -21,7 +22,7 @@ const blogPost = (props) => {
   return (
     <Layout>
       <h1>{markdownRemark.frontmatter.title}</h1>
-      <p>{markdownRemark.frontmatter.date}</p>
+      <p >{markdownRemark.frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }}></div>
     </Layout>
   )

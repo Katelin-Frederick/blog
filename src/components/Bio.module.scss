@@ -14,5 +14,16 @@
   border-radius: 50%;
   height: 150px;
   width: 150px;
-  border: 4px solid #e6b800;
+  border: 4px solid #996633;
+  transform: rotate(20deg)
+}
+
+@media(max-width: 850px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .imageContainer {
+    margin-top: 1rem;
+  }
 }

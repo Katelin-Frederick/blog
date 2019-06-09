@@ -31,11 +31,11 @@ const Index = () => {
       <Bio />
       <h1>Posts</h1>
       <ol className={indexStyles.posts}>
-        {data.allMarkdownRemark.edges.map(edge => {
+        {data.allMarkdownRemark.edges.map((edge, index) => {
           const { node } = edge
 
           return (
-            <li className={indexStyles.post}>
+            <li key={index} className={indexStyles.post}>
               <Link to={`/${node.fields.slug}`}>
                 <h2>{node.frontmatter.title}</h2>
                 <p>{node.frontmatter.date}</p>
