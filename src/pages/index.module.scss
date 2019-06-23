@@ -5,7 +5,7 @@
 }
 
 .post {
-  margin: 1rem 0;
+  margin: 2rem 0;
 
   a {
     background: #c3c1bb;
@@ -13,10 +13,11 @@
     display: block;
     padding: 1rem;
     text-decoration: none;
-    box-shadow: 0 10px 6px -6px #777;
+    transition: all 0.3s;
     
     &:hover {
       background: #aba8a0;
+      box-shadow: 0 10px 15px -6px #777;
     }
   }
 
